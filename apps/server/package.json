@@ -13,12 +13,14 @@
 		"cors": "^2.8.6",
 		"express": "^5.1.0",
 		"js-pixel-fonts": "^1.7.0",
+		"node-wav": "^0.0.2",
 		"simple-bitmap-font": "^0.0.123"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.19",
 		"@types/express": "^5.0.1",
 		"@types/node": "^22.13.14",
+		"@types/node-wav": "^0.0.4",
 		"tsx": "^4.19.3",
 		"typescript": "^5.8.2"
 	}
