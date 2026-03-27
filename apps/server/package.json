@@ -1,5 +1,5 @@
 {
-	"name": "@text-to-spectrum/server",
+	"name": "@spectrotyper/server",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -9,9 +9,14 @@
 		"lint": "echo \"Add lint script\""
 	},
 	"dependencies": {
-		"express": "^5.1.0"
+		"@spectrotyper/shared": "*",
+		"cors": "^2.8.6",
+		"express": "^5.1.0",
+		"js-pixel-fonts": "^1.7.0",
+		"simple-bitmap-font": "^0.0.123"
 	},
 	"devDependencies": {
+		"@types/cors": "^2.8.19",
 		"@types/express": "^5.0.1",
 		"@types/node": "^22.13.14",
 		"tsx": "^4.19.3",
