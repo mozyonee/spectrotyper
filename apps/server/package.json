@@ -4,9 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "tsx watch --env-file=.env src/index.ts",
-		"build": "tsc",
 		"start": "node dist/index.js",
-		"lint": "echo \"Add lint script\""
+		"format": "prettier --config ../../prettier.config.js --write \"src/**/*.{ts,tsx}\"",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
+		"build": "tsc"
 	},
 	"dependencies": {
 		"@spectrotyper/shared": "*",
@@ -22,6 +23,7 @@
 		"@types/node": "^22.13.14",
 		"@types/node-wav": "^0.0.4",
 		"tsx": "^4.19.3",
-		"typescript": "^5.8.2"
+		"typescript": "^5.8.2",
+	    "prettier": "^3.4.2"
 	}
 }

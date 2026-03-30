@@ -3,9 +3,13 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
+		"dev": "npm-run-all --parallel dev:next dev:ts",
+		"dev:ts": "tsc --noEmit --watch --preserveWatchOutput",
+		"dev:next": "next dev",
 		"start": "next start",
+		"build": "next build",
+		"format": "prettier --config ../../prettier.config.js --write \"src/**/*.{ts,tsx}\"",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
 		"lint": "eslint"
 	},
 	"dependencies": {
@@ -25,6 +29,7 @@
 		"@types/react-dom": "^19",
 		"eslint": "^9",
 		"eslint-config-next": "16.2.1",
+		"npm-run-all2": "^8.0.4",
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	}

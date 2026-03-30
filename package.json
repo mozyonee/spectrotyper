@@ -3,18 +3,23 @@
 	"version": "1.0.0",
 	"private": true,
 	"workspaces": [
-		"apps/client",
-		"apps/server",
-		"packages/*"
+		"packages/*",
+		"apps/*"
 	],
 	"scripts": {
-		"dev:client": "npm run dev --w apps/client",
-		"dev:server": "npm run dev --w apps/server",
-		"build": "npm run build --workspaces --if-present",
+		"dev:client": "npm run dev -w apps/client",
+		"dev:server": "npm run dev -w apps/server",
+		"format": "npm run format --workspaces --if-present",
+		"tsc": "npm run typecheck --workspaces --if-present",
+		"lint": "npm run lint --workspaces --if-present",
 		"test": "npm run test --workspaces --if-present",
-		"lint": "npm run lint --workspaces --if-present"
+		"build": "npm run build --workspaces --if-present",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@spectrotyper/shared": "^1.0.0"
+	},
+	"devDependencies": {
+		"husky": "^9.1.7"
 	}
 }
